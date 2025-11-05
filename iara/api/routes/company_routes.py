@@ -42,7 +42,7 @@ async def put_company(nova_empresa: Empresa):
     if df_empresa.empty:
         novo_cod_empresa = 1
     else:
-        novo_cod_empresa = int(pd.to_numeric(df_empresa["cod_empresa"], errors="coerce").max() + 76)
+        novo_cod_empresa = int(pd.to_numeric(df_empresa["cod_empresa"], errors="coerce").max() +1)
 
     empresa_cod = f"EMP{novo_cod_empresa:03d}"
 
